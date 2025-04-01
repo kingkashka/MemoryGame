@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Weapon" load_steps=3 format=3 uid="uid://ddgcjmxc5bpws"]
+
+[ext_resource type="Script" uid="uid://ci2a8bvpymi2f" path="res://Resources/Weapon.cs" id="1_xmdlo"]
+[ext_resource type="Texture2D" uid="uid://cvp7kslho3sfg" path="res://assets/glitch/brickSpecial10.png" id="2_80oxk"]
+
+[resource]
+script = ExtResource("1_xmdlo")
+damage = 20
+delay = 5
+weaponName = "BrickSpecialPink"
+texture = ExtResource("2_80oxk")
+metadata/_custom_type_script = "uid://ci2a8bvpymi2f"

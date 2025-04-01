@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2c6sh1v62lhl"]
+
+[ext_resource type="Script" uid="uid://doqfs4nere5yk" path="res://Scenes/ResourceLoader.cs" id="1_6hme3"]
+[ext_resource type="Resource" uid="uid://ddgcjmxc5bpws" path="res://Resources/BrickSpeciaPink.tres" id="3_royf3"]
+
+[node name="ResourceLoader" type="Node" node_paths=PackedStringArray("weaponImage")]
+script = ExtResource("1_6hme3")
+weapon1 = ExtResource("3_royf3")
+weaponImage = NodePath("WeaponImage")
+
+[node name="WeaponImage" type="Sprite2D" parent="."]
+position = Vector2(475, 369)

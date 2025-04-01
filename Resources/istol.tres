@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Weapon" load_steps=3 format=3 uid="uid://pfjobm8gaxnu"]
+
+[ext_resource type="Script" uid="uid://ci2a8bvpymi2f" path="res://Resources/Weapon.cs" id="1_rik6n"]
+[ext_resource type="Texture2D" uid="uid://dtgixk3pgtdey" path="res://assets/glitch/cactus.png" id="2_rik6n"]
+
+[resource]
+script = ExtResource("1_rik6n")
+damage = 15
+delay = 5
+weaponName = "pistol"
+texture = ExtResource("2_rik6n")
+metadata/_custom_type_script = "uid://ci2a8bvpymi2f"
