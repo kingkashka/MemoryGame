@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cnlepgcemacti"]
+[gd_scene load_steps=4 format=3 uid="uid://cnlepgcemacti"]
 
 [ext_resource type="Script" uid="uid://dre52ino3miww" path="res://Scenes/MainScreen/MainScreen.cs" id="1_cnqt4"]
 [ext_resource type="PackedScene" uid="uid://db1uqwifcixlh" path="res://Scenes/Levelbutton.tscn" id="2_powyr"]
+[ext_resource type="LabelSettings" uid="uid://bb475bkqlpx44" path="res://assets/LG_84_Green.tres" id="3_axy1o"]
 
 [node name="MainScreen" type="Control" node_paths=PackedStringArray("hbLevels")]
 layout_mode = 3
@@ -12,9 +13,66 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_cnqt4")
 levelButtonScene = ExtResource("2_powyr")
-hbLevels = NodePath("HBLevels")
+hbLevels = NodePath("VBoxContainer/HBLevels")
 
-[node name="HBLevels" type="HBoxContainer" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.692335, 0.706328, 0.998154, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Spacer" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "MEMORY MADNESS"
+label_settings = ExtResource("3_axy1o")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spacer2" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 2
+
+[node name="HBLevels" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Levelbutton" parent="VBoxContainer/HBLevels" instance=ExtResource("2_powyr")]
+layout_mode = 2
+
+[node name="Spacer3" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 2
+
+[node name="HBSprite" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Levelbutton" parent="VBoxContainer/HBSprite" instance=ExtResource("2_powyr")]
+layout_mode = 2
+
+[node name="Spacer4" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 2
