@@ -1,9 +1,20 @@
-[gd_scene format=3 uid="uid://cnlepgcemacti"]
+[gd_scene load_steps=3 format=3 uid="uid://cnlepgcemacti"]
 
-[node name="MainScreen" type="Control"]
+[ext_resource type="Script" uid="uid://dre52ino3miww" path="res://Scenes/MainScreen/MainScreen.cs" id="1_cnqt4"]
+[ext_resource type="PackedScene" uid="uid://db1uqwifcixlh" path="res://Scenes/Levelbutton.tscn" id="2_powyr"]
+
+[node name="MainScreen" type="Control" node_paths=PackedStringArray("hbLevels")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_cnqt4")
+levelButtonScene = ExtResource("2_powyr")
+hbLevels = NodePath("HBLevels")
+
+[node name="HBLevels" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

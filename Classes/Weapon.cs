@@ -1,7 +1,7 @@
 using Godot;
 
 [GlobalClass]
-public partial class Weapon:Resource
+public partial class Weapon : Resource
 {
     [Export] private int damage;
     [Export] private int delay;

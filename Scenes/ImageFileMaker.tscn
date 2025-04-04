@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bkny4infyg13l"]
+
+[ext_resource type="Script" uid="uid://d3kwyrlwa54wj" path="res://Scenes/ImageFileMaker.cs" id="1_u4gvy"]
+
+[node name="ImageFileMaker" type="Node"]
+script = ExtResource("1_u4gvy")

@@ -1,11 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://dyr377mc0nfn4"]
+[gd_scene load_steps=6 format=3 uid="uid://dyr377mc0nfn4"]
 
+[ext_resource type="Script" uid="uid://cmtfb1m45r6fx" path="res://Scenes/MasterScreen/MasterScreen.cs" id="1_145oq"]
 [ext_resource type="Texture2D" uid="uid://bt1wuortcdr1p" path="res://assets/images/backgroundEmpty.png" id="1_ousy2"]
 [ext_resource type="PackedScene" uid="uid://cnlepgcemacti" path="res://Scenes/MainScreen/MainScreen.tscn" id="2_5r23d"]
 [ext_resource type="PackedScene" uid="uid://ewf8t70e86xv" path="res://Scenes/GameScreen/GameScreen.tscn" id="3_145oq"]
 [ext_resource type="AudioStream" uid="uid://cub0swxwocu1l" path="res://assets/bgm_action_3.mp3" id="4_5r23d"]
 
 [node name="Master Screen" type="CanvasLayer"]
+script = ExtResource("1_145oq")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 anchors_preset = 15
@@ -15,9 +17,9 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_ousy2")
 
-[node name="MainScreen" parent="." instance=ExtResource("2_5r23d")]
-
 [node name="GameScreen" parent="." instance=ExtResource("3_145oq")]
+
+[node name="MainScreen" parent="." instance=ExtResource("2_5r23d")]
 
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_5r23d")

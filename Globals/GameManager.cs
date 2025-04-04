@@ -3,8 +3,12 @@ using System;
 
 public partial class GameManager : Node
 {
+	private readonly LevelsResource levels = GD.Load<LevelsResource>("res://Resources/LevelsResource.tres");
 	public static GameManager Instance { get; private set; }
-	// Called when the node enters the scene tree for the first time.
+	public static Godot.Collections.Array<LevelDataResource> GetLevels() 
+	{
+		return Instance.levels.Levels;
+	}
 	public override void _Ready()
 	{
 		Instance = this;
