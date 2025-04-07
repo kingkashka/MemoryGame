@@ -16,7 +16,6 @@ public partial class MainScreen : Control
 		{
 			var levelButton = levelButtonScene.Instantiate<Levelbutton>();
 			levelButton.SetLevelDataResource(levelDataResource);
-			
 			hbLevels.AddChild(levelButton);
 			
 		}

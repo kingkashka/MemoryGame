@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cnlepgcemacti"]
+[gd_scene load_steps=5 format=3 uid="uid://cnlepgcemacti"]
 
 [ext_resource type="Script" uid="uid://dre52ino3miww" path="res://Scenes/MainScreen/MainScreen.cs" id="1_cnqt4"]
 [ext_resource type="PackedScene" uid="uid://db1uqwifcixlh" path="res://Scenes/Levelbutton.tscn" id="2_powyr"]
 [ext_resource type="LabelSettings" uid="uid://bb475bkqlpx44" path="res://assets/LG_84_Green.tres" id="3_axy1o"]
+[ext_resource type="PackedScene" uid="uid://iqv1d1rgrcht" path="res://Scenes/FrontSprite/FrontSprite.tscn" id="4_ke8gl"]
 
 [node name="MainScreen" type="Control" node_paths=PackedStringArray("hbLevels")]
 layout_mode = 3
@@ -68,8 +69,18 @@ size_flags_vertical = 2
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_constants/separation = 48
 
-[node name="Levelbutton" parent="VBoxContainer/HBSprite" instance=ExtResource("2_powyr")]
+[node name="FrontSprite" parent="VBoxContainer/HBSprite" instance=ExtResource("4_ke8gl")]
+layout_mode = 2
+
+[node name="FrontSprite2" parent="VBoxContainer/HBSprite" instance=ExtResource("4_ke8gl")]
+layout_mode = 2
+
+[node name="FrontSprite3" parent="VBoxContainer/HBSprite" instance=ExtResource("4_ke8gl")]
+layout_mode = 2
+
+[node name="FrontSprite4" parent="VBoxContainer/HBSprite" instance=ExtResource("4_ke8gl")]
 layout_mode = 2
 
 [node name="Spacer4" type="Control" parent="VBoxContainer"]
