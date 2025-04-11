@@ -8,9 +8,7 @@ public partial class Levelbutton : TextureButton
 	private LevelDataResource levelDataResource;
 	public override void _Ready()
 	{
-		
 		Pressed += OnLevelButtonPressed;
-		// levelLabel.Text = $"{LevelDataResource.Rows.ToString()}X{LevelDataResource.Columns.ToString()}";
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -21,16 +19,13 @@ public partial class Levelbutton : TextureButton
 	public void OnLevelButtonPressed()
 	{
 		levelButtonSound.Play();
-		// Emit signal to start the level
-		// SignalManager.Instance.EmitSignal("StartLevel", LevelDataResource.LevelNumber);
-		// GD.Print($"Level {LevelDataResource.LevelNumber} button pressed.");
+		SignalManager.EmitOnLevelSelected(levelDataResource.LevelNumber);
 	}
 
 	public void SetLevelDataResource(LevelDataResource levelDataResource)
 	{
 		this.levelDataResource = levelDataResource;
 		levelLabel.Text = $"{levelDataResource.Rows}X{levelDataResource.Columns}";
-		// GD.Print($"Level {levelDataResource.LevelNumber} button set.");
 	}
 
 }

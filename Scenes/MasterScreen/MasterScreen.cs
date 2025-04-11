@@ -3,18 +3,37 @@ using System;
 
 public partial class MasterScreen : CanvasLayer
 {
-	// Called when the node enters the scene tree for the first time.
+	[Export] private MainScreen _mainScreen;
+	[Export] private GameScreen _gameScreen;
+
 	public override void _Ready()
 	{
-		var image = ImageManager.GetRandomItemImage();
-		var image2 = ImageManager.GetRandomItemImage();
-		var image3 = ImageManager.GetImage(10);
-		ImageManager.ShuffleImages();
-		var image4 = ImageManager.GetImage(10);
+		SignalManager.Instance.OnLevelSelected += ShowGame;
+		SignalManager.Instance.OnGameExitPressed += ShowMain;
+		ShowMain();
 	}
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
+
+	private void ShowGame(int levelNum)
 	{
+		_mainScreen.Hide();
+		_gameScreen.Show();
+	}
+
+	private void ShowMain()
+	{
+		_gameScreen.Hide();
+		_mainScreen.Show();
+		ClearTiles();
+	}
+
+
+
+	private void ClearTiles()
+	{
+		foreach (Node node in GetTree().GetNodesInGroup(MemoryTile.GroupName))
+		{
+			node.QueueFree();
+		}
 	}
 }

@@ -6,8 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://ewf8t70e86xv" path="res://Scenes/GameScreen/GameScreen.tscn" id="3_145oq"]
 [ext_resource type="AudioStream" uid="uid://cub0swxwocu1l" path="res://assets/bgm_action_3.mp3" id="4_5r23d"]
 
-[node name="Master Screen" type="CanvasLayer"]
+[node name="Master Screen" type="CanvasLayer" node_paths=PackedStringArray("_mainScreen", "_gameScreen")]
 script = ExtResource("1_145oq")
+_mainScreen = NodePath("MainScreen")
+_gameScreen = NodePath("GameScreen")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 anchors_preset = 15

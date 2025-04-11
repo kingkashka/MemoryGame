@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://boggasvebje3q"]
+
+[ext_resource type="Script" uid="uid://cf1ntgjpny5pf" path="res://Scenes/Scorer.cs" id="1_qbqup"]
+
+[node name="Scorer" type="Node" node_paths=PackedStringArray("revealTimer", "sound")]
+script = ExtResource("1_qbqup")
+revealTimer = NodePath("RevealTimer")
+sound = NodePath("Sound")
+
+[node name="RevealTimer" type="Timer" parent="."]
+wait_time = 1.2
+
+[node name="Sound" type="AudioStreamPlayer2D" parent="."]

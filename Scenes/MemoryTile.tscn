@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://yt4eawq8q310" path="res://assets/frames/blue_frame.png" id="2_ytod6"]
 [ext_resource type="Texture2D" uid="uid://d30ll5pjmtipb" path="res://assets/glitch/ambulance_SE.png" id="3_wanfj"]
 
-[node name="MemoryTile" type="TextureButton"]
+[node name="MemoryTile" type="TextureButton" node_paths=PackedStringArray("frameImage", "itemImage") groups=["tile"]]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -22,9 +22,10 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 texture_normal = ExtResource("1_kv40y")
 script = ExtResource("2_wanfj")
+frameImage = NodePath("FrameImage")
+itemImage = NodePath("ItemImage")
 
 [node name="FrameImage" type="TextureRect" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -40,17 +41,16 @@ grow_vertical = 2
 texture = ExtResource("2_ytod6")
 
 [node name="ItemImage" type="TextureRect" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+offset_left = -36.0
+offset_top = -33.0
+offset_right = 28.0
+offset_bottom = 31.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_wanfj")

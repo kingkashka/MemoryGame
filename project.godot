@@ -18,7 +18,7 @@ config/icon="uid://kt22pk0pj56w"
 [autoload]
 
 SignalManager="*res://Globals/SignalManager.cs"
-SoundManager="*res://Globals/SoundManager.cs"
+SoundManager="*res://SoundManager.cs"
 GameManager="*res://Globals/GameManager.cs"
 ImageManager="*res://Globals/ImageManager.cs"
 

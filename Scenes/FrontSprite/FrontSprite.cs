@@ -34,6 +34,8 @@ public partial class FrontSprite : TextureRect
 		tween.TweenCallback(Callable.From(SetRandomImage));
 		tween.TweenProperty(this, "scale", new Vector2(1, 1), scaleTime);
 		tween.TweenProperty(this, "rotation", GetRandomRotation(), GetRandomSpinTime());
+		tween.SetTrans(Tween.TransitionType.Sine);
+		tween.SetEase(Tween.EaseType.InOut);
 		tween.TweenCallback(Callable.From(RunMe));
 	}
 }
